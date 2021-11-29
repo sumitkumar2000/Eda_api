@@ -20,4 +20,6 @@ from apis.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('eda/st', StationaryTestView.as_view(),name = 'stationary test'),
+    path('eda/granular',grangers_api.as_view(),name='Grangers test'),
+    path('eda/jct',johansen_api.as_view(),name="JOHANSEN test"),
 ]

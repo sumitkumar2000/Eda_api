@@ -6,7 +6,7 @@ import numpy as np
 warnings.filterwarnings("ignore")
 
 def grangers_causality_matrix(data,order, variables, test = 'ssr_chi2test', verbose=False):
-    
+    data=data[variables]
     dataset = pd.DataFrame(np.zeros((len(variables), len(variables))), columns=variables, index=variables)
 
     for c in dataset.columns:
